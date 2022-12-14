@@ -11323,3 +11323,8 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: center;
 }
+
+.col{
+  display: flex;
+  flex-direction: column;
+}
