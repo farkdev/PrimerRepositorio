@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block tittle %} Nosotros {% endblock tittle%}
 {% block content %}
-
+{%load static%}
 <h1 class="titulo"> Contenido de nosotros</h1>
 
 <header class="masthead" style="background-image: url('assets/img/about-bg.jpg')">
@@ -17,6 +17,32 @@
     </div>
 </header>
 <!-- Main Content-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="d-block img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="d-block img" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" class="d-block img" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 <main class="mb-4">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
