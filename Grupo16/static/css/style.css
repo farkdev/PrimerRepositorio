@@ -78,7 +78,7 @@
 
 body {
   margin: 0;
-  font-family: var(--bs-body-font-family);
+  font-family: 'Work Sans', sans-serif;
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -11322,9 +11322,19 @@ textarea.form-control-lg {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  background-color: #0dcaf0;
 }
 
 .col{
   display: flex;
   flex-direction: column;
+}
+
+.logo{
+  width: 20px;
+  height: 20px;
+}
+
+.color{
+  background-color: #0dcaf0;
 }
