@@ -11290,6 +11290,7 @@ textarea.form-control-lg {
 .titulo{
   display: flex;
   justify-content: center;
+  color: saddlebrown;
 }
 
 .footer{
@@ -11337,4 +11338,12 @@ textarea.form-control-lg {
 
 .color{
   background-color: skyblue;
+}
+
+.img2{
+  width: 450px;
+  height: 280px;
+}
+.text-justify {
+  text-align: justify;
 }
