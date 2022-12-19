@@ -26,7 +26,9 @@ urlpatterns = [
     path('inicio', Index),
     path('nosotros', nosotros, name="nosotros"),
     path('noticias', NoticiaListView.as_view()) ,
-    path('blog', blog, name="blog")
+    path('blog', blog, name="blog"),
+    path('usuarios/', include('django.contrib.auth.urls')),
+    path('usuarios/',include('usuarios.urls'))
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()
