@@ -1,8 +1,40 @@
-{% extends 'base.html' %}
+{% load static%}
+<!doctype html>
+<html lang="es-ar">
+<head>
+  <title> {% block tittle %} Proyecto Grupo16 {% endblock tittle %}</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" type="image/x-icon" href="static/assets/Logo.png" />
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  
+</head>
 
-{% block tittle %}  {% endblock tittle %}
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark color">
+      <div class="container">
+          <a class="navbar-brand" href="inicio">Fundación ALA'</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link" href="{% url 'Grupo16.urls:index.html' %}">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="nosotros">Nosotros</a></li>
+                  <li class="nav-item"><a class="nav-link" href="noticias">Noticias</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link active" aria-current="page" href="{% url 'login' %}">Iniciar sesión</a></li>
+              </ul>
+          </div>
+      </div>
+  </nav>
 
-{% block content %}
+  </header>
+  <main>
+
 <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
@@ -27,12 +59,12 @@
                                     </div>
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="password.html">Te olvidaste tu contraseña?</a>
-                                        <a class="btn btn-primary" href="index.html">Iniciar sesión</a>
+                                        <a class="btn btn-primary" href="inicio">Iniciar sesión</a>
                                     </div>
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">
-                                <div class="small"><a href="register.html">No tienes cuenta? Registrate!</a></div>
+                                <div class="small"><a href="registro">No tienes cuenta? Registrate!</a></div>
                             </div>
                         </div>
                     </div>
@@ -40,7 +72,6 @@
             </div>
         </main>
     </div>
-{% endblock content%}
 
 <footer class="py-5 bg-white">
     <div class="container"><p class="m-0 text-center text-dark">Copyright &copy; Grupo 16</p></div>
