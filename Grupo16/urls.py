@@ -19,16 +19,16 @@ from Grupo16.app.noticia.views import *
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from Grupo16.app.noticia.urls import *
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('inicio', Index),
-    path('nosotros', nosotros, name="nosotros"),
-    path('noticias', NoticiaListView.as_view()) ,
-    path('blog', blog, name="blog"),
-    path('usuarios/', include('django.contrib.auth.urls')),
-    path('usuarios/',include('usuarios.urls'))
+    path('', include('Grupo16.app.noticia.urls')),
+    path('', include('django.contrib.auth.urls')),
+    path('', include('usuarios.urls')),
+    
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()

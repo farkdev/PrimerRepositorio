@@ -3,6 +3,9 @@ from django.views import generic
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 
+
+
+
 class RegistroUsuario(generic.CreateView):
     form_class = UserCreationForm
     template_name = 'registration/registro.html'
@@ -13,3 +16,5 @@ def login(request):
     return render(request, "login.html")
 
 
+def Index(request):
+    return render(request, "index.html")
