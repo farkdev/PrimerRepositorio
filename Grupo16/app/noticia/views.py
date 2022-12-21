@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from .models import Noticia
 
 
@@ -15,5 +15,8 @@ class NoticiaListView(ListView):
     model = Noticia 
     template_name = "listaNoticias.html"
 
-def blog(request):
-    return render(request, "blog.html")
+
+class NoticiaDetallada(DetailView):
+    model = Noticia
+    template_name = "blog.html"
+

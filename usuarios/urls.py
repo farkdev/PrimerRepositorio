@@ -10,8 +10,8 @@ from .views import *
 
 urlpatterns = [
     path('registro', RegistroUsuario.as_view(), name="registro"),
-    path('inicio', Index),
-    path('login', login)
+    path('', Index, name='inicio'),
+    path('login', login,)
     
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

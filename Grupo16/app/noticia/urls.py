@@ -10,7 +10,7 @@ urlpatterns =[
     path('inicio', Index),
     path('nosotros', nosotros, name="nosotros"),
     path('noticias', NoticiaListView.as_view()) ,
-    path('blog', blog, name="blog"),
+    path('blog/<int:pk>', NoticiaDetallada.as_view(), name="blog"),
 
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
