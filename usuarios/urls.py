@@ -11,7 +11,8 @@ from .views import *
 urlpatterns = [
     path('registro', RegistroUsuario.as_view(), name="registro"),
     path('', Index, name='inicio'),
-    path('login', login,)
+    path('', login, name="login")
+    
     
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

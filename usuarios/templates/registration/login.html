@@ -15,10 +15,15 @@
                                 <form method="POST">
                                     {% csrf_token %}
 
-                    
+                                    {{ form }}
 
 
-                                    <div class="form-floating mb-3">
+                                    <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
+                                        <a class="small" href="password.html">Te olvidaste tu contraseña?</a>
+                                        <a class="btn btn-primary" href="">Iniciar sesión</a>
+                                    </div>
+
+                                    <!-- <div class="form-floating mb-3">
                                         <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
                                         <label for="inputEmail">Usuario</label>
                                     </div>
@@ -33,7 +38,7 @@
                                     <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <a class="small" href="password.html">Te olvidaste tu contraseña?</a>
                                         <a class="btn btn-primary" href="inicio">Iniciar sesión</a>
-                                    </div>
+                                    </div> -->
                                 </form>
                             </div>
                             <div class="card-footer text-center py-3">

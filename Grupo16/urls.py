@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from Grupo16.app.noticia.urls import *
+from usuarios.urls import *
 
 
 
@@ -28,6 +29,7 @@ urlpatterns = [
     path('', include('Grupo16.app.noticia.urls')),
     path('', include('django.contrib.auth.urls')),
     path('', include('usuarios.urls')),
+    
     
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

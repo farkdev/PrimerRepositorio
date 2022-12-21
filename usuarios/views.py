@@ -12,6 +12,7 @@ class RegistroUsuario(generic.CreateView):
     success_url = reverse_lazy('login')
     
 
+
 def login(request):
     return render(request, "login.html")
 
