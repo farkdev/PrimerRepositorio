@@ -15,12 +15,14 @@
                             <div class="card-body">
                                 <form method="post">
                                     {% csrf_token %}
-
+                                    
                                     {{form.as_p}}
+                                    {{form.media}}
 
-                                    <button class="btn btn-secondary">Registrarse
 
-                                    </button>
+                                    <button class="btn btn-secondary" type="submit" name="registro">Registrarse</button>
+
+                                    
                                     <!-- <div class="row mb-3">
                                         <div class="col-md-6">
                                             <div class="form-floating mb-3 mb-md-0">
