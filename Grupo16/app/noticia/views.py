@@ -30,3 +30,17 @@ class NuevaNoticia(CreateView):
         form.save()
 
         return redirect("noticias")
+
+
+def cursos(request):
+    return render(request, "cursos.html")
+
+def seminarios(request):
+    return render(request, "seminarios.html")
+
+def charlas(request):
+    return render(request, "charlas.html")
+
+
+def capacitaciones(request):
+    return render(request, "capacitaciones.html")

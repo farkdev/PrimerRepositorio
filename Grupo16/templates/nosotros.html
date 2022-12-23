@@ -2,21 +2,24 @@
 {% block tittle %} Nosotros {% endblock tittle%}
 {% block content %}
 {%load static%}
+<head>
 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 <!-- Main Content-->
 
-  <header class="py-5">
-      <div class="container px-5">
-          <div class="row justify-content-center">
-              <div class="col-lg-8 col-xxl-6">
-                  <div class="text-center my-5">
-                      <h1 class="fw-bolder mb-3 titulo">Nuestra misión</h1>
-                      <p class="lead fw-normal text-muted mb-4">Fomentar la educación de las personas que quieran aprender, capacitarse, jerarquizarse sobre profesiones domesticas, con el fin de ayudarlos a involucrarse en el habito laboral.</p>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </header>
+<header class="py-5">
+    <div class="container px-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-xxl-6">
+                <div class="text-center my-5">
+                    <h1 class="fw-bolder mb-3 titulo">Nuestra misión</h1>
+                    <p class="lead fw-normal text-muted mb-4">Fomentar la educación de las personas que quieran aprender, capacitarse, jerarquizarse sobre profesiones domesticas, con el fin de ayudarlos a involucrarse en el habito laboral.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
   <!-- About section one-->
   <section class="py-5 bg-light" id="scroll-target">
       <div class="container px-5 my-5">
@@ -52,45 +55,39 @@
         </div>
     </div>
 </section>
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.54118232163!2d-58.99046928439929!3d-27.45240632254138!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94450cf4a36ad9b9%3A0xf4c3b6307ab74974!2sAv.%20Alberdi%20180%2C%20H3500%20Resistencia%2C%20Chaco!5e0!3m2!1ses!2sar!4v1671233372746!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
   <!-- Team members section-->
   <section class="py-5 bg-light">
-      <div class="container px-5 my-5">
-          <div class="text-center">
-              <h2 class="fw-bolder titulo">Nuestro equipo</h2>
-              <p class="lead fw-normal text-muted mb-5">Conocenos y forma parte de nuestra familia!</p>
-          </div>
-          <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
-              <div class="col mb-5 mb-5 mb-xl-0">
-                  <div class="text-center">
-                      <img class="img-fluid rounded-circle mb-4 px-4" src="/static/assets/img/Miguel.jpeg" alt="..." />
-                      <h5 class="fw-bolder">Miguel Amadeo Barrios</h5>
-                      <div class="fst-italic text-muted">Secretario</div>
-                  </div>
-              </div>
-              <div class="col mb-5 mb-5 mb-xl-0">
-                  <div class="text-center">
-                      <img class="img-fluid rounded-circle mb-4 px-4" src="/static/assets/img/Felicia.jpeg" alt="..." />
-                      <h5 class="fw-bolder">Felicia Del Carmen Sambrana.</h5>
-                      <div class="fst-italic text-muted">Presidenta</div>
-                  </div>
-              </div>
-              <div class="col mb-5 mb-5 mb-sm-0">
-                  <div class="text-center">
-                      <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                      <h5 class="fw-bolder">Toribio Nerthus</h5>
-                      <div class="fst-italic text-muted">Operations Manager</div>
-                  </div>
-              </div>
-              <div class="col mb-5">
-                  <div class="text-center">
-                      <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d" alt="..." />
-                      <h5 class="fw-bolder">Malvina Cilla</h5>
-                      <div class="fst-italic text-muted">CTO</div>
-                  </div>
-              </div>
-          </div>
-      </div>
+        <div class="container px-5 my-5">
+            <div class="text-center">
+                <h2 class="fw-bolder titulo">Nuestro equipo</h2>
+                <p class="lead fw-normal text-muted mb-5">Conocenos y forma parte de nosotros!</p>
+            </div>
+            <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4 img-small" src="/static/assets/img/Miguel.jpeg" alt="..." />
+                        <h5 class="fw-bolder">Miguel Amadeo Barrios</h5>
+                        <div class="fst-italic text-muted">Secretario</div>
+                    </div>
+                </div>
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4 img-small" src="/static/assets/img/Felicia.jpeg" alt="..." />
+                        <h5 class="fw-bolder">Felicia Del Carmen Sambrana.</h5>
+                        <div class="fst-italic text-muted">Presidenta</div>
+                    </div>
+                </div>
+                <div class="col mb-5 mb-5 mb-sm-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4 img-small" src="/static/assets/img/secretario.jpeg" alt="..." />
+                        <h5 class="fw-bolder">Toribio Nerthus</h5>
+                        <div class="fst-italic text-muted">Tesorero</div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
   </section>
 
 

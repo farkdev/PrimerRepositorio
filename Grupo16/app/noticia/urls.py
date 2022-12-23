@@ -8,11 +8,15 @@ from django.conf import settings
 
 
 urlpatterns =[
-    path('inicio', Index, name="index"),
+    path('', Index, name="inicio"),
     path('nosotros', nosotros, name="nosotros"),
     path('noticias', NoticiaListView.as_view(), name="noticias") ,
     path('blog/<int:pk>', NoticiaDetallada.as_view(), name="blog"),
-    path('add_post/', NuevaNoticia.as_view(), name="nuevaNoticia")
+    path('add_post/', NuevaNoticia.as_view(), name="nuevaNoticia"),
+    path('capacitaciones', capacitaciones, name="capacitaciones"),
+    path('charlas', charlas, name="charlas"),
+    path('seminarios', seminarios, name="seminarios"),
+    path('cursos', cursos, name="cursos"),
 
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
