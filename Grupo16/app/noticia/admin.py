@@ -9,4 +9,4 @@ class AuthorAdmin(admin.ModelAdmin):
     list_display = ('titulo', 'id', 'activo', 'fecha', 'categoria')
 
 admin.site.register(Categoría)
-
+admin.site.register(Comentario)

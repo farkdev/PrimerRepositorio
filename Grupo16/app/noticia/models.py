@@ -39,3 +39,12 @@ class Noticia(models.Model):
     def get_absolute_url(self):
         return reverse("blog", args=(str(self.id)))
 
+class Comentario(models.Model):
+    comentarios = models.ForeignKey(Noticia, related_name="comentarios", on_delete=models.CASCADE)
+    nombre = models.CharField(max_length=50)
+    texto = models.TextField(max_length=250)
+    fecha = models.DateTimeField(default=timezone.now)
+
+
+    def __str__(self):
+        return ("comentario en  {self.comentarios} {self.nombre} {self.texto}")

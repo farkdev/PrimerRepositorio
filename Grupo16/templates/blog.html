@@ -28,6 +28,21 @@
                 </div>
             </div>
         </div>
+        <h2>Comentarios </h2>
+            {% if not comentarios.comentarios.all %}
+                sin comentarios todavía
+            
+            {% else %}
+                {% for comentarios in comentarios.comentarios.all %}
+
+                    {{comentarios.nombre}}
+                    {{comentarios.fecha_added}}
+                    <br>
+                    {{comentarios.texto}}
+                {% endfor %}
+            {% endif%}
+
+
     </div>
     {% endfor %}
 

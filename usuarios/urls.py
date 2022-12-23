@@ -12,7 +12,7 @@ from django.contrib.auth.views import LogoutView
 urlpatterns = [
     path("registro", register, name="registro"),
     path("logout", LogoutView.as_view(template_name="logout.html"), name="logout"),
-    path("login", login),
+    path("login", login, name="login"),
     
     
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
