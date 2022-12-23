@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block tittle %} Nueva noticia  {% endblock tittle %}
+
+{% block content %}
+
+<h1>Nueva noticia</h1>
+
+<form action="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+
+    <button class="btn btn-secondary"> Postear</button>
+
+
+
+</form>
+
+
+
+
+{% endblock content%}

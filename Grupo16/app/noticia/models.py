@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-
+from django.urls import reverse
 
 # Create your models here.
 
@@ -33,5 +33,9 @@ class Noticia(models.Model):
     def delete(self, using = None , keep_parents = False):
         self.imagen.delete(self.imagen.name)
         super().delete()
-        
+
+
+
+    def get_absolute_url(self):
+        return reverse("blog", args=(str(self.id)))
 

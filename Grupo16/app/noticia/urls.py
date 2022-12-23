@@ -1,9 +1,10 @@
 from . import views
 from django.urls import path
-from Grupo16.app.noticia.views import *
+from .views import *
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
+
 
 
 urlpatterns =[
@@ -11,6 +12,7 @@ urlpatterns =[
     path('nosotros', nosotros, name="nosotros"),
     path('noticias', NoticiaListView.as_view(), name="noticias") ,
     path('blog/<int:pk>', NoticiaDetallada.as_view(), name="blog"),
+    path('add_post/', NuevaNoticia.as_view(), name="nuevaNoticia")
 
 ]+static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
